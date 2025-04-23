@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULATOR</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="script.js" defer></script> <!-- Link to external JS file -->
+</head>
+<body>
+    <div class="container">
+        <div class="display">
+            <input id="screen" type="text" placeholder="0">
+        </div>
+
+        <div class="btns">
+            <!-- creating 5 rows for calculator buttons -->
+            <div class="row">
+                <!-- each row has 6 different buttons -->
+                <button id="ce" onclick="backspc()">CE</button>
+                <button onclick="fact()">x!</button>
+                <button class="btn">(</button>
+                <button class="btn">)</button>
+                <button class="btn">%</button>
+                <button id="ac" onclick="screen.value=''">AC</button>
+            </div>
+
+            <div class="row">
+                <button onclick="sin()">sin</button>
+                <button onclick="sqrt()">&radic;</button>
+                <button class="btn">7</button>
+                <button class="btn">8</button>
+                <button class="btn">9</button>
+                <button class="btn">/</button>
+            </div>
+
+            <div class="row">
+                <button onclick="cos()">cos</button>
+                <button onclick="cubert()">&#8731;</button>
+                <button class="btn">4</button>
+                <button class="btn">5</button>
+                <button class="btn">6</button>
+                <button class="btn">*</button>
+            </div>
+
+            <div class="row">
+                <button onclick="tan()">tan</button>
+                <button onclick="square()">x<sup>2</sup></button>
+                <button class="btn">1</button>
+                <button class="btn">2</button>
+                <button class="btn">3</button>
+                <button class="btn">-</button>
+            </div>
+
+            <div class="row">
+                <button onclick="pi()">π</button>
+                <button onclick="cube()">x<sup>3</sup></button>
+                <button class="btn">0</button>
+                <button class="btn">.</button>
+                <button id="eval" onclick="screen.value=calculation(screen.value)">=</button>
+                <button class="btn">+</button>
+            </div>
+            <button id="clear-history" onclick="clearHistory()">Clear History</button>
+        </div>
+    </div>
+    <div id="history">
+        <h1><center>History</center></h1>
+    </div>
+</body>
+</html>
